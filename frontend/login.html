@@ -1,0 +1,54 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HealthSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('photback.webp') no-repeat center center/cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="relative flex justify-center items-center min-h-screen">
+    <div class="overlay"></div>
+    <div class="z-10 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg max-w-md w-full">
+        <h2 class="text-3xl font-bold text-center text-white mb-6">Login</h2>
+        <form id="loginForm" class="space-y-4">
+            <div>
+                <label class="block text-white">Email</label>
+                <input type="email" id="email" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div>
+                <label class="block text-white">Password</label>
+                <input type="password" id="password" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">Login</button>
+        </form>
+        <p class="text-center text-white mt-4">Don't have an account? <a href="signup.html" class="text-blue-400 hover:underline">Sign up</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Normally, you would validate against a backend here, but for this example, we'll just simulate a successful login.
+
+            // Store the login state in localStorage
+            localStorage.setItem('userLoggedIn', 'true');
+            
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

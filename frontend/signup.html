@@ -1,0 +1,62 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - HealthSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: url('photback.webp') no-repeat center center/cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="relative flex justify-center items-center min-h-screen">
+    <div class="overlay"></div>
+    <div class="z-10 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg max-w-md w-full">
+        <h2 class="text-3xl font-bold text-center text-white mb-6">Sign Up</h2>
+        <form id="signupForm" class="space-y-4">
+            <div>
+                <label class="block text-white">Name</label>
+                <input type="text" id="name" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div>
+                <label class="block text-white">Email</label>
+                <input type="email" id="signupEmail" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div>
+                <label class="block text-white">Password</label>
+                <input type="password" id="signupPassword" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <div>
+                <label class="block text-white">Confirm Password</label>
+                <input type="password" id="confirmPassword" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">Sign Up</button>
+        </form>
+        <p class="text-center text-white mt-4">Already have an account? <a href="login.html" class="text-blue-400 hover:underline">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Normally, you'd save the user's data to a backend here, but for this example, we'll just simulate a successful sign-up.
+
+            // Store the login state in localStorage
+            localStorage.setItem('userLoggedIn', 'true');
+            
+            // Redirect to index.html
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
