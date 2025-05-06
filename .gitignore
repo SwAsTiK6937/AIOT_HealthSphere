@@ -1,5 +1,4 @@
 # Dependencies
-node_modules/
 __pycache__/
 *.pyc
 
@@ -31,4 +30,7 @@ Thumbs.db
 serviceAccountKey.json
 
 # Temporary files
-tempCodeRunnerFile.py 
+tempCodeRunnerFile.py
+
+# Wellness Risk Monitor
+wellness-risk-monitor/serviceAccount.json 
