@@ -16,9 +16,9 @@ class GeminiAPI:
             print(f"Model: {model.name}, Supported Methods: {model.supported_generation_methods}")
         return models
 
-    def generate_recommendation(self, heart_rate, steps, sleep_hours, risk_score):
+    def generate_recommendation(self, heart_rate, steps, calories, risk_score):
         prompt = f"""
-        Given a user with heart rate {heart_rate} bpm, {steps} steps, {sleep_hours} hours of sleep, 
+        Given a user with heart rate {heart_rate} bpm, {steps} steps, {calories} calories, 
         and a health risk score of {risk_score:.2f}:
         Provide a concise fitness and wellness recommendation.
         """
