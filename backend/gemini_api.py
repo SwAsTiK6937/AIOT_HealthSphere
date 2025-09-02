@@ -4,7 +4,7 @@ class GeminiAPI:
     def __init__(self, api_key):
         genai.configure(api_key=api_key)
         # Use a known valid model (e.g., gemini-1.5-pro, adjust based on availability)
-        self.model = genai.GenerativeModel('gemini-1.5-pro')  # Updated model name
+        self.model = genai.GenerativeModel('gemini-2.0-flash')  # Updated model name
         
         # Optional: List available models for debugging (uncomment to run once)
         # self.list_available_models()
@@ -29,4 +29,4 @@ class GeminiAPI:
             return f"Error generating recommendation: {str(e)}"
 
 # Replace with your actual Gemini API key
-gemini = GeminiAPI(api_key="AIzaSyD_rBV_zI-DPJmvPxJGBowsAV4ylBvWBw4")
+gemini = GeminiAPI(api_key="AIzaSyA7zWOdJyeQFLihs8dVXkJrQliVbv0PMrk")
