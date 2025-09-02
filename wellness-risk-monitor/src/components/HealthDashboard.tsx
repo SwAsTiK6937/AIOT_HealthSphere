@@ -41,7 +41,7 @@ const HealthDashboard = () => {
 
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
-  }, [healthData]);
+  }, []);
 
   return (
     <div className="space-y-6 animate-fade-in">
